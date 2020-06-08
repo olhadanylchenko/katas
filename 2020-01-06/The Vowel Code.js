@@ -48,3 +48,8 @@ const decode = (str) => {
 };
 
 decode("h2ll4");
+
+//___________________
+// const table = ['a', 'e', 'i', 'o', 'u']
+// const encode = string => string.split('').map(x => table.indexOf(x) + 1 || x).join('')
+// const decode = string => string.split('').map(x => table[Number(x) - 1] || x).join('')
