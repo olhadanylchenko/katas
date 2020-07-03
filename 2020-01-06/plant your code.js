@@ -40,3 +40,30 @@ function whereToWater(plantsArray) {
 }
 
 whereToWater(plants);
+
+// NOTES: Plant-Latin has different vowels than we do. Append "tiva" after every vowel "a",
+//"llia" after every vowel "e", "mus" after every vowel "i", "phylum" after every vowel "o",
+//and "rea" after every vowel "u". For example: "I love water!" becomes "Imus lophylumvellia wativatelliar!"
+//("Imus lophylumvellia wativatelliar!");
+
+function translatePlantLatin(message) {
+  /* Enter your solution here! */
+  const plantLatin = {
+    a: "ativa",
+    e: "ellia",
+    i: "imus",
+    o: "ophylum",
+    u: "urea",
+    A: "Ativa",
+    E: "Ellia",
+    I: "Imus",
+    O: "Ophylum",
+    U: "Urea",
+  };
+  return message
+    .split("")
+    .map((letter) => (plantLatin[letter] ? plantLatin[letter] : letter))
+    .join("");
+}
+
+translatePlantLatin("I love water!") == "Imus lophylumvellia wativatelliar!";
